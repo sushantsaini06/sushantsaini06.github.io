@@ -85,21 +85,25 @@ Portfolio.typeAnimation();
 function show_python_projects(){
 	var web_projects = document.getElementById("web_projects");
 	var python_projects = document.getElementById("python_projects");
-
 	var event_projects = document.getElementById("event_projects");
+	var product_projects = document.getElementById("product_projects");
 
 	var web_buttons = document.getElementsByClassName("web_button");
 	var python_buttons = document.getElementsByClassName("python_button");
 	var event_buttons = document.getElementsByClassName("event_button");
-	
+	var product_buttons = document.getElementsByClassName("product_button");
+
 	event_projects.style.display = "none";
 	web_projects.style.display = "none";
+	product_projects.style.display = "none";
 	python_projects.style.display = "block";
 
 	Array.prototype.forEach.call(web_buttons,function(btn){
 		btn.classList.remove("active");
 	});
-
+	Array.prototype.forEach.call(product_buttons,function(btn){
+ 	 btn.classList.remove("active");
+  });
 	Array.prototype.forEach.call(python_buttons,function(btn){
 		btn.classList.add("active");
 	});
@@ -113,14 +117,17 @@ function show_web_projects(){
 	var python_projects = document.getElementById("python_projects");
 
 	var event_projects = document.getElementById("event_projects");
+	var product_projects = document.getElementById("product_projects");
 
 	event_projects.style.display = "none";
 	python_projects.style.display = "none";
+	product_projects.style.display = "none";
 	web_projects.style.display = "block";
 
 	var web_buttons = document.getElementsByClassName("web_button");
 	var python_buttons = document.getElementsByClassName("python_button");
 	var event_buttons = document.getElementsByClassName("event_button");
+	var product_buttons = document.getElementsByClassName("product_button");
 
 	Array.prototype.forEach.call(web_buttons,function(btn){
 		btn.classList.add("active");
@@ -129,7 +136,9 @@ function show_web_projects(){
 	Array.prototype.forEach.call(python_buttons,function(btn){
 		btn.classList.remove("active");
 	});
-
+	Array.prototype.forEach.call(product_buttons,function(btn){
+		btn.classList.remove("active");
+	});
 	Array.prototype.forEach.call(event_buttons,function(btn){
 		btn.classList.remove("active");
 	});
@@ -139,13 +148,45 @@ function show_event_projects(){
 	var web_projects = document.getElementById("web_projects");
 	var python_projects = document.getElementById("python_projects");
 	var event_projects = document.getElementById("event_projects");
+	var product_projects = document.getElementById("product_projects");
 	python_projects.style.display = "none";
 	web_projects.style.display = "none";
+	product_projects.style.display = "none";
 	event_projects.style.display = "block";
 
 	var web_buttons = document.getElementsByClassName("web_button");
 	var python_buttons = document.getElementsByClassName("python_button");
 	var event_buttons = document.getElementsByClassName("event_button");
+	var product_buttons = document.getElementsByClassName("product_button");
+	Array.prototype.forEach.call(web_buttons,function(btn){
+		btn.classList.remove("active");
+	});
+
+	Array.prototype.forEach.call(python_buttons,function(btn){
+		btn.classList.remove("active");
+	});
+	Array.prototype.forEach.call(product_buttons,function(btn){
+		btn.classList.remove("active");
+	});
+	Array.prototype.forEach.call(event_buttons,function(btn){
+		btn.classList.add("active");
+	});
+
+}
+function show_product_projects(){
+	var web_projects = document.getElementById("web_projects");
+	var python_projects = document.getElementById("python_projects");
+	var event_projects = document.getElementById("event_projects");
+	var product_projects = document.getElementById("product_projects");
+	python_projects.style.display = "none";
+	web_projects.style.display = "none";
+	event_projects.style.display = "none";
+	product_projects.style.display = "block";
+
+	var web_buttons = document.getElementsByClassName("web_button");
+	var python_buttons = document.getElementsByClassName("python_button");
+	var event_buttons = document.getElementsByClassName("event_button");
+	var product_buttons = document.getElementsByClassName("product_button");
 	Array.prototype.forEach.call(web_buttons,function(btn){
 		btn.classList.remove("active");
 	});
@@ -155,6 +196,9 @@ function show_event_projects(){
 	});
 
 	Array.prototype.forEach.call(event_buttons,function(btn){
+		btn.classList.remove("active");
+	});
+	Array.prototype.forEach.call(product_buttons,function(btn){
 		btn.classList.add("active");
 	});
 }
